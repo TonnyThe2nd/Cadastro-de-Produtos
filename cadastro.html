@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: url(back.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+        .box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+        fieldset{
+            height: 550px;
+            border-radius: 30px;
+            border: 3px solid rgb(0, 0, 0);
+            width: 650px;
+            color: white;
+        }
+        fieldset legend{
+            text-align: center;
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            border: 1px solid black;
+            border-radius: 8px;
+            background-color: black;
+        }
+        .values{
+            position: absolute;
+            left: 25%;
+            top: 25%;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputProduct{
+            position: relative;
+            background: none;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            outline: none;
+            border-radius: 60px;
+            color: rgb(0, 0, 0);
+            width: 250px;
+            left: 20%;
+        }
+        .labelInput{
+            position: absolute;
+            pointer-events: none ;
+            right: 1%;
+            bottom: 150%;
+            width: 200px;
+            color: black;
+        }
+        .inputBoxData{
+            margin-left: 80px;
+        }
+        .button{
+            position: absolute;
+            left: 50%;
+        }
+        .buttonCustom{
+            border: none;
+            background-color: rgb(0, 0, 0);
+            border-radius: 30px;
+            width: 120px;
+            font-size: 20px;
+            font-style: bold;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 7px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <fieldset>
+        <legend style="font-family: Times, Times New Roman, serif;"><b>Produto</b></legend>
+        <form action="">
+            <div class="values">
+                <div class="inputBox">
+                    <input type="text" name="nome" class="inputProduct" id="nameInput">
+                    <label for="nome" class="labelInput">Nome do Produto</label>  
+                </div>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="departamento" class="inputProduct" id="departamentoInput">
+                    <label for="departamento" class="labelInput">Departamento</label>
+                </div>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="number" name="quantidade" class="inputProduct" id="quantidadeInput">
+                    <label for="quantidade" class="labelInput">Quantidade</label>
+                </div>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="preco" class="inputProduct" id="precoInput">
+                    <label for="preco" class="labelInput">Preço</label>
+                </div>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="descr" class="inputProduct" id="descrInput">
+                    <label for="descr" class="labelInput">Descrição</label>
+                </div>
+                <br>
+                <br>
+                <div class="button">
+                    <input type="submit" value="Cadastrar" class="buttonCustom" onclick="Enviar();">
+                </div>
+            </div>    
+            </form>
+            <script src="./cadastro.js">
+            </script>
+    </fieldset>
+</div>
+    
+</body>
+</html>
